@@ -11,10 +11,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
            
-            Text("Minglle")
+            Text("Mingle")
                 .font(.title)
                 .fontWeight(.black)
                 .foregroundColor(Color.gray)
+                .bold()
+                .textCase(/*@START_MENU_TOKEN@*/.lowercase/*@END_MENU_TOKEN@*/)
+            Text("Frase: ")
                 .bold()
         }
         .padding()
