@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var intensNaColecao: Int = 0
+    
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -67,6 +70,7 @@ struct ContentView: View {
                 Text("O Mingle se destaca por fazer o dobro do trabalho na metade do tempo, com extema precisão. Essas habilidades são uteis para ela sem sua função de Analista de Dados Sênior para uma empresa internacional de computação em nuvem. Ela também tem uma propensão para dança de salão, dança de linha e praticamente qualquer tipo de atividade que a deixe dançar ao som da música.")
                     .fontWeight(.light)
                     .foregroundColor(Color.gray)
+                    .multilineTextAlignment(.center)
                 Spacer()
             }
             
@@ -75,23 +79,30 @@ struct ContentView: View {
             HStack {
                 Spacer()
                 Button {
-                    // acao
+                    intensNaColecao += 1
                 } label: {
-                    Text("Na sua coleção: 2")
-                        .padding()
-                        .background(.green)
-                }
-                .cornerRadius(30.0)
-                Spacer()
+                    
+                    if intensNaColecao == 0 {
+                        Text("Adicionar á coleção")
+                            .padding()
+                            .background(.blue)
+                            .foregroundColor(.white)
+                    } else {
+                        Text("Na sua coleção:\(intensNaColecao)")
+                            .padding()
+                            .background(.green)
+                    }
+                    }
+                    .cornerRadius(30.0)
+                    Spacer()
+                    }.padding()
                 
-                
-            }.padding()
+            }
+        }
+        struct ContentView_Previews: PreviewProvider {
+            static var previews: some View {
+                ContentView()
+            }
         }
     }
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
-    }
-}
-
+    
