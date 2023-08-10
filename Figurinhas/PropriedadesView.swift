@@ -7,12 +7,21 @@
 
 import SwiftUI
 
+enum TipoPropriedade {
+    case numeroInteiro
+    case numerodecimal
+    case texto
+}
+
 struct PropriedadesView: View {
     
-    var imagem = "lifepreserver"
-    var nome = "Vidas: "
-    var valor = "2"
-    var cor = Color.green
+    var imagem: String = "lifepreserver"
+    var nome: String = "Vidas: "
+    var valor: String = "0.4"
+    var valorInt: Int = 1
+    var valorDecimal: Double = 1.0
+    var cor: Color = .green
+    var tipo: TipoPropriedade = .numeroInteiro
     
     @State var apresentado = false
     
@@ -29,10 +38,18 @@ struct PropriedadesView: View {
                     .font(.system(size: 30))
                 
                 Text(nome)
-                
-                
-                Text(valor)
+                if tipo == .texto {
+                    Text(valor)
                     .padding(.trailing)
+            }
+                if tipo == .numeroInteiro {
+                    Text("\(valorInt)")
+                        .padding(.trailing)
+                }
+                if tipo == .numerodecimal {
+                    Text("\(valorDecimal * 100, specifier: "%.0f")%")
+                        .padding(.trailing)
+                }
             }
         }
         .sheet(isPresented: $apresentado) {
