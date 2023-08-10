@@ -4,24 +4,26 @@
 //
 //  Created by Patrick Alves on 09/08/23.
 //
+//
+
 
 import SwiftUI
 
 enum TipoPropriedade {
     case numeroInteiro
-    case numerodecimal
+    case numeroDecimal
     case texto
 }
 
-struct PropriedadesView: View {
+struct ProprieadesView: View {
     
     var imagem: String = "lifepreserver"
     var nome: String = "Vidas: "
-    var valor: String = "0.4"
-    var valorInt: Int = 1
-    var valorDecimal: Double = 1.0
+    @Binding var valor: String
+    @Binding var valorInt: Int
+    @Binding var valorDecimal: Double
     var cor: Color = .green
-    var tipo: TipoPropriedade = .numeroInteiro
+    var tipo: TipoPropriedade = .texto
     
     @State var apresentado = false
     
@@ -29,37 +31,37 @@ struct PropriedadesView: View {
         Button {
             apresentado = true
         } label: {
-     
             HStack {
-                
                 Image(systemName: imagem)
                     .foregroundColor(cor)
                     .frame(width: 30.0)
                     .font(.system(size: 30))
                 
+
                 Text(nome)
+                
                 if tipo == .texto {
                     Text(valor)
-                    .padding(.trailing)
-            }
+                        .padding(.trailing)
+                }
                 if tipo == .numeroInteiro {
                     Text("\(valorInt)")
                         .padding(.trailing)
                 }
-                if tipo == .numerodecimal {
+                if tipo == .numeroDecimal {
                     Text("\(valorDecimal * 100, specifier: "%.0f")%")
                         .padding(.trailing)
                 }
             }
         }
         .sheet(isPresented: $apresentado) {
-            PropriedadeEditarView()
+            PropriedadeEditarView(valor: $valor, valorInt: $valorInt, valorDecimal: $valorDecimal, tipo: tipo, apresentado: $apresentado)
         }
     }
 }
 
-struct PropriedadesView_Previews: PreviewProvider {
+struct ProprieadesView_Previews: PreviewProvider {
     static var previews: some View {
-        PropriedadesView()
+        ProprieadesView(valor: .constant(""), valorInt: .constant(0), valorDecimal: .constant(0))
     }
 }

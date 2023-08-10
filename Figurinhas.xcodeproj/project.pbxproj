@@ -11,11 +11,13 @@
 		7D15678F2A82C0AF00419679 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D15678E2A82C0AF00419679 /* ContentView.swift */; };
 		7D1567912A82C0B000419679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1567902A82C0B000419679 /* Assets.xcassets */; };
 		7D1567942A82C0B000419679 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1567932A82C0B000419679 /* Preview Assets.xcassets */; };
+		7D2799482A84EC8A000E9692 /* FigurasLinhaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2799472A84EC8A000E9692 /* FigurasLinhaView.swift */; };
 		7D2DCE542A84506100483162 /* PropriedadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DCE532A84506100483162 /* PropriedadesView.swift */; };
 		7D2DCE562A84528400483162 /* DetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DCE552A84528400483162 /* DetalheView.swift */; };
 		7D2DCE582A845F0900483162 /* FigurasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DCE572A845F0900483162 /* FigurasView.swift */; };
 		7D2DCE5A2A8463AA00483162 /* PropriedadeEditarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DCE592A8463AA00483162 /* PropriedadeEditarView.swift */; };
 		7D2DCE5C2A84673700483162 /* ModeloDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DCE5B2A84673700483162 /* ModeloDados.swift */; };
+		7DF9EAAB2A84E36400C3A0FB /* MinhaColecaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9EAAA2A84E36400C3A0FB /* MinhaColecaoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +26,13 @@
 		7D15678E2A82C0AF00419679 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D1567902A82C0B000419679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D1567932A82C0B000419679 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7D2799472A84EC8A000E9692 /* FigurasLinhaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasLinhaView.swift; sourceTree = "<group>"; };
 		7D2DCE532A84506100483162 /* PropriedadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropriedadesView.swift; sourceTree = "<group>"; };
 		7D2DCE552A84528400483162 /* DetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheView.swift; sourceTree = "<group>"; };
 		7D2DCE572A845F0900483162 /* FigurasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasView.swift; sourceTree = "<group>"; };
 		7D2DCE592A8463AA00483162 /* PropriedadeEditarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropriedadeEditarView.swift; sourceTree = "<group>"; };
 		7D2DCE5B2A84673700483162 /* ModeloDados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloDados.swift; sourceTree = "<group>"; };
+		7DF9EAAA2A84E36400C3A0FB /* MinhaColecaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhaColecaoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +67,12 @@
 			children = (
 				7D2DCE5B2A84673700483162 /* ModeloDados.swift */,
 				7D15678C2A82C0AF00419679 /* FigurinhasApp.swift */,
+				7DF9EAAA2A84E36400C3A0FB /* MinhaColecaoView.swift */,
 				7D15678E2A82C0AF00419679 /* ContentView.swift */,
 				7D2DCE592A8463AA00483162 /* PropriedadeEditarView.swift */,
 				7D2DCE572A845F0900483162 /* FigurasView.swift */,
 				7D2DCE552A84528400483162 /* DetalheView.swift */,
+				7D2799472A84EC8A000E9692 /* FigurasLinhaView.swift */,
 				7D2DCE532A84506100483162 /* PropriedadesView.swift */,
 				7D1567902A82C0B000419679 /* Assets.xcassets */,
 				7D1567922A82C0B000419679 /* Preview Content */,
@@ -159,6 +165,8 @@
 				7D2DCE582A845F0900483162 /* FigurasView.swift in Sources */,
 				7D2DCE5C2A84673700483162 /* ModeloDados.swift in Sources */,
 				7D2DCE5A2A8463AA00483162 /* PropriedadeEditarView.swift in Sources */,
+				7D2799482A84EC8A000E9692 /* FigurasLinhaView.swift in Sources */,
+				7DF9EAAB2A84E36400C3A0FB /* MinhaColecaoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
