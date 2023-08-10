@@ -13,7 +13,8 @@ struct FigurasView: View {
     var body: some View {
         List(figuras) {figura in
             NavigationLink(destination:
-                    DetalheView()){
+                            DetalheView(figura:
+                                       figura)){
                 HStack {
                     Image(figura.imagem+"_p")
                         .resizable()
@@ -26,6 +27,7 @@ struct FigurasView: View {
                 }
         
             }
+        .navigationTitle("Figuras")
         }
     }
 
