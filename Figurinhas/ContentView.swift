@@ -18,11 +18,11 @@ struct ContentView: View {
             }
             .tabItem {
             Label("Figuras", systemImage: "face.smiling")
-                    }
-                }
+                    }              
         DetalheView(figura: figuras[0])
-                .tabItem {
-                    Label("Minha Coleção", systemImage: "face.dashed")
+            .tabItem {
+                Label("Minha Coleção", systemImage: "face.dashed")
+            }
                 }
         }
         
